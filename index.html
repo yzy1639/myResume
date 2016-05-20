@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/animate.min.css" />
+		
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/swiper.animate.min.js"></script>
+	    <script src="js/swiper-3.3.1.min.js"></script>
+	    <script src="js/rem.js"></script>
+	</head>
+	<body>
+		
+		<div class="main">
+			<!-- Swiper -->
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		        	<!--第一个页面-->
+		            <div class="swiper-slide main_first">
+		            	<div class="main_about">
+		            		
+		            		<div class="ani main_small" swiper-animate-effect="rotateIn" swiper-animate-duration="1.5s" swiper-animate-delay="1s">
+		            			<!--底下的小图 一直转圈-->
+		            			<img src="img/an_1.png" />
+		            		</div>
+		            		
+		            		<div class="ani main_out" swiper-animate-effect="flip" swiper-animate-duration=".2s" swiper-animate-delay=".3s">
+		            			<!--外边框-->
+		            			<img src="img/an_2.png" />
+		            		</div>
+		            		<div class="ani main_side" swiper-animate-effect="flip" swiper-animate-duration="1s" swiper-animate-delay=".2s">
+		            			<!--边框内部的方形图-->
+		            			<img src="img/an_3.png" />
+		            		</div>
+		            		
+		            		<p class="ani main_chinese" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s">个人简历</p>
+		            		<p class="ani main_english" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s">RESUME</p>
+		            		
+		            		
+		            		
+		            		
+		            	</div>
+		            	<div class="ani main_cont" >
+		            		<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.3s">姓名：余志业</p>
+		            		<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">年龄：24</p>
+		            		<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.9s">性别：男</p>
+		            	</div>
+		            	<!--指引箭头-->
+		            	<div class="ani main_nav" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay=".5s">
+		            		
+		            	</div>
+		            </div>
+		            <!--第二个页面-->
+		            <div class="swiper-slide skill">
+		            	<div class="skill_head">
+		            		<div class="ani skill_img" swiper-animate-effect="skill_img" swiper-animate-duration="3s">
+		            			<!--齿轮-->
+		            			<img src="img/box_1.png" />
+		            			<span>
+		            				<p></p>
+		            			</span>
+		            		</div>
+		            		<!--齿轮下方 边线-->
+		            		<div class="ani skill_border" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay=".2s">
+		            			<p>专业技能</p>
+		            		</div>
+		            	</div>
+		            	<div class="skill_cont">
+		            		<p>HTML/CSS</p>
+		            		<p>JavaScript</p>
+		            		<p>HTML5/CSS3</p>
+		            		<p>JQuery/BootStrap/Swiper</p>
+		            		<p>FireWorks/PhotoShop</p>
+		            		<p>HBuilder/Sublime/DreamWeaver</p>
+		            	</div>
+		            </div>
+		            <!--第三个页面-->
+		            <div class="swiper-slide main_same">Slide 3</div>
+		            <!--第四个页面-->
+		            <div class="swiper-slide main_same">Slide 4</div>
+		            <!--第五个页面-->
+		            <div class="swiper-slide main_same">Slide 5</div>
+		            <!--第6个页面-->
+		            <div class="swiper-slide main_same">Slide 6</div>
+		            <!--第7个页面-->
+		            <div class="swiper-slide main_same">Slide 7</div>
+		            <!--第8个页面-->
+		            <div class="swiper-slide main_same">Slide 8</div>
+		            <!--第9个页面-->
+		            <div class="swiper-slide main_same">Slide 9</div>
+		            <!--第10个页面-->
+		            <div class="swiper-slide main_same">Slide 10</div>
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination"></div>
+		    </div>
+		</div>
+		
+	
+	    
+	    <!-- Initialize Swiper -->
+	    <script>
+		    var mySwiper = new Swiper('.swiper-container', {
+		        pagination: '.swiper-pagination',
+		       mousewheelControl : true,
+		        direction: 'vertical',
+		        
+		        
+			    onInit: function(swiper){
+			   		swiperAnimateCache(swiper); //隐藏动画元素 
+			    	swiperAnimate(swiper); //初始化完成开始动画
+			  	}, 
+			  	onSlideChangeEnd: function(swiper){ 
+			    	swiperAnimate(swiper);
+			 	},
+			 	onTransitionEnd: function(swiper){
+					swiperAnimate(swiper);
+			    },
+			 	watchSlidesProgress: true,
+			})
+	    </script>
+	</body>
+</html>
